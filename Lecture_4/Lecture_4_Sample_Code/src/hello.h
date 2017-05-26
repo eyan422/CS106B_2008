@@ -44,3 +44,17 @@ void PrintVector(Vector<int> &v)
     for (int i = 0; i < v.size(); i++)
     cout << v[i] << " ";
 }
+
+int CountLines(ifstream &in)
+{
+    int count = 0;
+    while (true)
+    {
+        string line;
+        getline(in, line);
+        if (in.fail()) break;
+        count++;
+    }
+    return count;
+}
+
